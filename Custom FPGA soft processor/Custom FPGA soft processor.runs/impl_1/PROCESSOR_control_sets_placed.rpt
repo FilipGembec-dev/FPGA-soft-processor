@@ -1,0 +1,344 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Sun May 29 14:43:35 2022
+| Host         : DESKTOP-874KJD5 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file PROCESSOR_control_sets_placed.rpt
+| Design       : PROCESSOR
+| Device       : xc7a100t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   266 |
+|    Minimum number of control sets                        |   266 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    31 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   266 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |   262 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              35 |           19 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               5 |            2 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             113 |           59 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------+------------------------------------+---------------------------+------------------+----------------+--------------+
+|            Clock Signal            |            Enable Signal           |      Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------+------------------------------------+---------------------------+------------------+----------------+--------------+
+|  nolabel_line77/R_reg[4]_0         |                                    | nolabel_line77/R_reg[8]_4 |                1 |              1 |         1.00 |
+|  nolabel_line86/Tcheck_reg_i_2_n_1 |                                    |                           |                1 |              1 |         1.00 |
+|  nolabel_line76/R_reg[18]_0        |                                    | nolabel_line86/T          |                1 |              4 |         4.00 |
+| ~T_reg[3]                          |                                    |                           |               13 |             15 |         1.15 |
+|  n_0_2397_BUFG                     | nolabel_line86/CMD_reg[13]_0[0]    | rst_IBUF                  |               13 |             16 |         1.23 |
+|  n_0_2397_BUFG                     | nolabel_line86/E[0]                | rst_IBUF                  |                9 |             16 |         1.78 |
+|  n_0_2397_BUFG                     | nolabel_line86/Q[5]                | rst_IBUF                  |               11 |             16 |         1.45 |
+|  n_0_2397_BUFG                     | nolabel_line86/Q[6]                | rst_IBUF                  |                4 |             16 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line86/Q[4]                | rst_IBUF                  |                7 |             16 |         2.29 |
+|  clk___IBUF_BUFG                   |                                    |                           |                5 |             19 |         3.80 |
+|  n_0_2397_BUFG                     | nolabel_line86/R                   | rst_IBUF                  |               15 |             33 |         2.20 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[8]_rep__0_2   |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[8]_rep__1_1   |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_24         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[8]_rep__5_2   |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[8]_rep__4_2   |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[8]_rep__5_0   |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_19         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_25         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[8]_rep__4_0   |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_26         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[8]_rep__3_1   |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_17         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_18         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_27         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_29         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_3          |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_30         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_31         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[8]_rep__2_1   |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_23         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[8]_rep__5_3   |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_21         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_32         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_35         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_36         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_13         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_38         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_15         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_39         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_20         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_34         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_2          |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_4          |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_0          |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_1          |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_33         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_16         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_28         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_37         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_40         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_5          |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_6          |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_14         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_7          |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[8]_rep__6_2   |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[8]_rep__6_0   |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_10         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_12         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_11         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_22         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[8]_rep__6_3   |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_8          |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[9]_9          |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_0         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_1         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_10        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_34        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_23        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_24        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_35        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_36        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_33        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_6         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_1         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_29        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_16        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_20        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_37        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_19        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_43        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_14        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_31        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_5         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_11        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_32        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_4         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_27        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_3         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_40        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_2         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_7         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_13        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_0         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_8         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_17        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_22        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_25        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_38        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_42        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_12        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_28        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_21        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_18        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_9         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_39        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_15        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_30        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_26        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[10]_41        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__1_1  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__1_2  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__1_4  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__1_7  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__0_12 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__0_19 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__0_3  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__1_3  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__1_9  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__1_16 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__0_14 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_0         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_1         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__0_15 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__0_21 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__0_17 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_11        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__0_4  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_12        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_5         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_7         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_3         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__0_13 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__0_6  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__0_1  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__1_10 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__0_20 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__1_11 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__1_13 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__0_8  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__1_15 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__0_2  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__1_12 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__1_5  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_10        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_13        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_2         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_9         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__0_5  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__0_10 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__0_18 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__0_9  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__1_14 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__1_6  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__0_16 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__2_1  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__0_7  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__1_8  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__2_2  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_6         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_4         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_8         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[11]_rep__0_11 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_14    |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep__0_1  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep__0_11 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep__0_15 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep__0_10 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep__0_4  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_10        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep_7     |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_11        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_3         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep_2     |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_4         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_2         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_5         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep__0_0  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep_5     |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep__0_7  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_9         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep__0_17 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep_6     |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep__0_16 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep__0_12 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep_3     |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep__0_19 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_7         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep__0_2  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_1     |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep__0_6  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_1         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep__0_18 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep__0_3  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep_1     |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep__0_13 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep__0_8  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_0         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep__0_9  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[8]_1          |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep_4     |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_8         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep__0_5  |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_0     |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_10    |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_11    |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_12    |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_13    |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[12]_rep__0_14 |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[15]_3         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[14]_2         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_25    |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[15]_14        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_20    |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[14]_11        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_22    |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_2     |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[14]_4         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[14]_5         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_3     |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_16    |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_18    |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_17    |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[14]_0         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_7     |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_5     |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_8     |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[14]_3         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_6     |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[14]_6         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_15    |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_4     |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_6         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[14]_8         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_21    |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[15]_1         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[15]_11        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[15]_12        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[15]_13        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[15]_15        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[15]_17        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[15]_19        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_19    |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[15]_18        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[14]_10        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[14]_9         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[15]_2         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[15]_5         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[15]_6         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_23    |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[15]_7         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[14]_1         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[15]_8         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_24    |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[13]_rep_9     |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[14]_7         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[15]_10        |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[15]_4         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[15]_9         |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[8]_2          |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[8]_6          |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[8]_rep_0      |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[8]_3          |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[8]_0          |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[8]_rep__0_1   |                           |               16 |             64 |         4.00 |
+|  n_0_2397_BUFG                     | nolabel_line77/R_reg[15]_0         |                           |               16 |             64 |         4.00 |
++------------------------------------+------------------------------------+---------------------------+------------------+----------------+--------------+
+
+
